@@ -1,3 +1,8 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Body from "./Body";
+import Login from "./Login";
+
+
  
 
 function App() {
@@ -5,10 +10,16 @@ function App() {
 
   return (
     <>
-      
-      <h1 >
-        Hello
-      </h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Body />} >
+            <Route path="/login" element={<Login />} />
+            
+          </Route>        
+        </Routes>
+      </BrowserRouter>
+
+    
     </>
   )  
 }
